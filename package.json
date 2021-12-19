@@ -1,0 +1,23 @@
+{
+  "name": "db-backup-tool",
+  "version": "1.0.0",
+  "description": "PostgreSQL cli backup utility. Saves your db's automaticaly by a given interval and stores them for a given period of time time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "sql",
+    "backup",
+    "utility",
+    "auto",
+    "postgresql"
+  ],
+  "author": "Teodor Stanishev",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "fs": "^0.0.1-security"
+  }
+}
