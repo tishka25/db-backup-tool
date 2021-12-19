@@ -129,3 +129,4 @@ dist
 # Template directory for local testing only
 input-files
 output-files
+config.json
