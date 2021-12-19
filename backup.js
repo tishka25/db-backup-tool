@@ -74,7 +74,7 @@ export const startBackupJob = (config, dbConfig) => {
     }
   };
   if(job){
-    job.stop();
+    stopBackupJob();
   }
   job = new CronJob(config.interval, onTick, null, true);
 }
@@ -82,6 +82,7 @@ export const startBackupJob = (config, dbConfig) => {
 export const stopBackupJob = () => {
   if (job) {
     job.stop();
+    console.log('Restarted job service');
   } else {
     console.error('No jobs are available to stop');
   }
