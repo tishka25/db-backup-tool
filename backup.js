@@ -1,6 +1,6 @@
 import { CronJob } from 'cron';
 import * as fs from 'fs/promises';
-import path from 'path';
+import path, { join } from 'path';
 import { dumpDb } from './pg.js';
 
 // Directory to store all backups
@@ -73,6 +73,9 @@ export const startBackupJob = (config, dbConfig) => {
       stopBackupJob();
     }
   };
+  if(job){
+    job.stop();
+  }
   job = new CronJob(config.interval, onTick, null, true);
 }
 
