@@ -2,6 +2,11 @@
 
 Utility for backing up remote PostgreSQL database on configurable intervals with managable timeout in which the utility can auto delete old backups
 
+## Prerequisite
+- ```pg_dump``` - This is the main requirement of the project because all of the backups are made from this tool. Docs https://github.com/tldr-pages/tldr/blob/master/pages/common/pg_dump.md
+- ```node```
+- ```npm```
+
 ## Configuration
 Create in the root of the project a file named: ```config.json```
 
