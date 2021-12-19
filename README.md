@@ -27,27 +27,27 @@ The contents of the configuration file are as follows
 ```dbConfig.user``` - Username of the owner of the database <br>
 
 ## Installation
-```
+```bash
 npm install
 ```
 
 ## Start
 ### Using normal cli
-```
+```bash
 node index.js
 ```
 ### Using process manager (Recommended)
 First you have to install the process manager. The recommended manager is ```pm2```. <br>
 To install ```pm2``` run:
-```
+```bash
 npm install -g pm2
 ```
 After successful installation run:
-```
+```bash
 pm2 start index.js --name db-backup-tool
 ```
 To run the backup tool on start up, run: 
-```
+```bash
 pm2 startup
 pm2 save
 ```
